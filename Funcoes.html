@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+     <head>
+           <title> Lógica JS </title>
+           <meta charset="utf-8">
+    </head>
+    <body>
+         <h1> Lógica com JavaScript</h1>
+         <div id="output"> roi </div> <!--vai ser inserido os dados -->
+
+         <script>
+             var output = document.querySelector ('#output'); 
+             /* toda vez que precise acessar (no JS) algum elemento no 
+             HTML (Dentro do body), utilizar a palavra "Document.algo" */
+
+             var mensagem = '';
+             for (var i = 0; i <= 1001; i++) 
+             {
+                 mensagem = mensagem + 'i: ' + i + '<br>';
+                 // ou mensagem += 'i: ' + i + '<br>'
+             }
+
+             output.innerHTML = mensagem;
+          
+        </script>
+    </body>
+</html>  

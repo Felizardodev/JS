@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+     <head>
+           <title> Lógica JS </title>
+           <meta charset="utf-8">
+    </head>
+    <body>
+         <h1> Lógica com JavaScript</h1>
+
+         <script>
+            var numero = prompt ('Digite um numero: ');
+            numero = parseFloat (numero);
+
+            var indice = 0;
+            //repita até que indice seja <= 1000
+
+            while (indice <= 1000) 
+            {
+            document.write ( numero + ' x ' + indice + ' = ' + 
+            (numero * indice) + ' <br> ');
+
+            if (indice % 10 === 0 && indice > 0) {
+                document.write ('<hr>');
+            }
+            
+             indice = indice + 1;
+
+           // indice += 1; mesma coisa que o de cima
+
+           // indice++; mesma coisa que o de cima
+            }
+            document.write ('saiu do loop');
+        </script>
+    </body>
+</html>  

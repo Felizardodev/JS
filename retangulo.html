@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+     <head>
+           <title> Lógica JS </title>
+           <meta charset="utf-8">
+    </head>
+    <body>
+         <h1> Lógica com JavaScript</h1>
+
+         <button onclick="mostrarAreaAlert()">mostrar area em
+          um alert</button>
+
+         <button onclick="mostrarAreaOutput()">mostrar area em 
+          no output </button>
+
+         <div id="output"> </div>
+             
+
+         <script>
+
+             function mostrarAreaAlert()
+             {
+                var largura = prompt("digite a largura");
+                largura = parseFloat(largura);
+
+                var altura = prompt("digite a altura");
+                altura = parseFloat(altura);
+
+                try{
+                var area = calcularArea(largura, altura);
+               } catch(e) {
+                 area = e
+               }
+
+               alert('a area total e: ' + area);
+             }
+             
+             function mostrarAreaOutput()
+             {
+                 
+                var largura = prompt("digite o largura");
+                largura = parseFloat(largura);
+
+                var altura = prompt("digite o altura");
+                altura = parseFloat(altura);
+
+                try{
+                var area = calcularArea(largura, altura);
+               } catch(e) {
+                 area = e
+               }
+
+                document.querySelector('#output').innerHTML = 'a area total e: ' + area;
+             }
+
+             mostrarAreaAlert(); //quando a pagina e aberta 
+
+             function calcularArea (l, a)
+             {
+                 if (l === undefined || a === undefined)
+                 {
+                     throw new Error('Calcular area precisa receber 2 valores') ;
+                 }
+                 if (isNaN(l) || isNaN(a))
+                 {
+                     throw new Error ('apenas numeros')
+                 }
+                 return l * a;
+             }
+
+         </script>
+    </body>
+</html> 
